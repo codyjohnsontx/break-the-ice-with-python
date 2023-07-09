@@ -35,6 +35,17 @@ for i in range(2000,3201):
         print(i,end=',')
 print("\b")
 ```
+**Cody's version**
+**Using for Loops***
+**simplified**
+```python
+numbers = []
+
+for i in range(2000,3201):
+	if(i%7 ==0) and (i%5 != 0):
+		numbers.append(i)
+print(numbers)
+
 
 ---
 - **Using generators and list comprehension**
@@ -105,22 +116,18 @@ print fact(x)
   ```
 ---
 ```python
-'''Solution by: minnielahoti
+'''Solution by: codyjohnson
 '''
+def factorial(n):
+	if n == 0:
+		return 1
+	else:
+		return n * factorial(n-1)
+##Example usage##
+number = int(input('Enter a whole number'))
+result = factorial(number)
+print(f"The factorial of {number} is: {result}")
 
-while True:
-try:
-    num = int(input("Enter a number: "))
-    break
-except ValueError as err:
-    print(err)
-
-org = num
-fact = 1
-while num:
-    fact = num * fact
-    num = num - 1
-print(f'the factorial of {org} is {fact}')
 ```
 ---
 ```python
